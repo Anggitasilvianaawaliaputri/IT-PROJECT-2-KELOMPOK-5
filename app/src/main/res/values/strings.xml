@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PAMETA</string>
+    <string name="welcome_front">Selamat Datang di PAMETA</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Password</string>
+    <string name="full_name_hint">Nama Lengkap</string>
+    <string name="repeat_password_hint">Ulangi Password</string>
+    <string name="no_account">Belum punya akun? Register</string>
+    <string name="have_account">Sudah punya akun? Login</string>
+    <string name="forgot_password">Lupa Password?</string>
+    <string name="start">Mulai</string>
+</resources>
