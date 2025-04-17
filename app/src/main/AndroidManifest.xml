@@ -1,6 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pameta">
+
+    <!-- PERMISSIONS -->
+    <!-- Untuk akses internet (wajib kalau pakai Firebase, API, dsb.) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <!-- Izin notifikasi (untuk Android 13+ / API 33 ke atas) -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:allowBackup="true"
@@ -12,15 +20,47 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PAMETA"
         tools:targetApi="31">
+
+        <!-- Splash Screen (jika kamu punya splash activity) -->
         <activity
-            android:name=".MainActivity"
+            android:name=".SoilActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Login Activity (halaman login setelah splash) -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+
+        <!-- Halaman utama setelah login -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <!-- (Opsional) Activity monitoring tanah -->
+        <activity
+            android:name=".StatusPenyiramanActivity"
+            android:exported="false" />
+
+        <!-- (Opsional) Activity penjadwalan -->
+        <activity
+            android:name=".SetScheduleActivity"
+            android:exported="false" />
+
+        <!-- (Opsional) Activity notifikasi -->
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
