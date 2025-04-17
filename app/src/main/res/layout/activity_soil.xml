@@ -1,0 +1,8 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:gravity="center"
+    android:padding="24dp" android:background="#E8F5E9">
+    <TextView android:text="Halaman Monitoring Kelembaban Tanah"
+        android:textSize="18sp" android:textStyle="bold"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" />
+</LinearLayout>

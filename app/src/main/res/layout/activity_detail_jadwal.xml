@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context=".DetailJadwalActivity">
+
+    <!-- Konten Scrollable -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Tombol Back -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_button_gray"
+                android:contentDescription="Back"
+                android:elevation="4dp" />
+
+            <!-- Judul -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detail Jadwal"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:textColor="#000000" />
+
+            <!-- Card Detail -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_box"
+                android:elevation="6dp">
+
+                <!-- Gambar Tanaman -->
+                <ImageView
+                    android:id="@+id/imgPlant"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_cabe"
+                    android:contentDescription="Gambar Tanaman"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Nama Tanaman -->
+                <TextView
+                    android:id="@+id/tvPlantName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tanaman Cabe"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="12dp"
+                    android:textColor="#000000" />
+
+                <!-- Informasi Jadwal -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="pH tanah : 6.0 – 7.0\nSuhu : 25°C – 30°C\nAtur waktu penyiraman otomatis pagi"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="pH tanah : 5.0 – 6.0\nSuhu : 27°C – 28°C\nAtur waktu penyiraman otomatis sore"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+            </LinearLayout>
+
+            <!-- Tombol Refresh -->
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Refresh"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/rounded_green_button"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="8dp"
+                android:elevation="3dp" />
+
+            <!-- Spacer biar navbarnya turun -->
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#1B5E20"
+        android:gravity="center"
+        android:paddingHorizontal="8dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_leaf"
+            android:padding="8dp"
+            android:contentDescription="Nav Soil" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_calendar"
+            android:padding="8dp"
+            android:contentDescription="Nav Calendar" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_bell"
+            android:padding="8dp"
+            android:contentDescription="Nav Bell" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_user"
+            android:padding="8dp"
+            android:contentDescription="Nav User" />
+    </LinearLayout>
+</LinearLayout>

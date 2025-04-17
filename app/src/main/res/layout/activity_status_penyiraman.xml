@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Konten ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomNavigation"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Tombol kembali -->
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_back"
+                android:layout_gravity="start"
+                android:contentDescription="Back Button" />
+
+            <!-- Status Penyiraman -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/rounded_box"
+                android:layout_marginTop="16dp"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_plant"
+                    android:contentDescription="Plant" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status Penyiraman"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="16dp" />
+            </LinearLayout>
+
+            <!-- Pompa Air dan Pie Chart -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp"
+                android:weightSum="2">
+
+                <!-- Pompa Air -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_box"
+                    android:padding="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pompa Air"
+                        android:textStyle="bold" />
+
+                    <Switch
+                        android:id="@+id/switchPompa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textOn="On"
+                        android:textOff="Off" />
+                </LinearLayout>
+
+                <!-- Pie Chart -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_box"
+                    android:padding="16dp"
+                    android:layout_marginStart="8dp"
+                    android:elevation="4dp">
+
+                    <TextView
+                        android:id="@+id/tvKelembaban"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="90%"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kelembaban Tanah"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Mode Manual / Otomatis -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="16dp">
+
+                <Button
+                    android:id="@+id/btnManual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Manual"
+                    android:backgroundTint="#E0F2F1"
+                    android:textColor="#004D40"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnOtomatis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otomatis"
+                    android:backgroundTint="#A5D6A7"
+                    android:textColor="#1B5E20"/>
+            </LinearLayout>
+
+            <!-- Log Penyiraman -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:padding="16dp"
+                android:background="@drawable/rounded_box"
+                android:elevation="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Log Penyiraman"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <TextView android:text="Tanggal" android:layout_weight="1" />
+                        <TextView android:text="Mode" android:layout_weight="1" />
+                        <TextView android:text="Hasil" android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="11 April 2025" android:layout_weight="1" />
+                        <TextView android:text="Manual" android:layout_weight="1" />
+                        <TextView android:text="Berhasil" android:layout_weight="1" />
+                    </TableRow>
+
+                    <TableRow>
+                        <TextView android:text="10 April 2025" android:layout_weight="1" />
+                        <TextView android:text="Otomatis" android:layout_weight="1" />
+                        <TextView android:text="Berhasil" android:layout_weight="1" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#1B5E20"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_leaf"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bell"
+            android:padding="8dp" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_user"
+            android:padding="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
